@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.sidebar {
+    width: 260px;
+    border-right: 1px solid var(--border);
+    background-color: var(--surface);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 40;
+}
+
+.main {
+    flex: 1;
+    margin-left: 260px;
+    padding: 2rem;
+    width: calc(100% - 260px);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        /* Mobile handling later */
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,228 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.badge {
+    background: var(--muted);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.memberCount {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+}
+
+.postForm {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.postInputTitle {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    outline: none;
+    color: var(--foreground);
+}
+
+.postInputTitle:focus {
+    border-color: var(--primary);
+}
+
+.postInput {
+    width: 100%;
+    padding: 0.5rem;
+    min-height: 80px;
+    border: none;
+    background: transparent;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    color: var(--foreground);
+    margin-top: 0.5rem;
+}
+
+.formFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.postCard {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--muted);
+    background-size: cover;
+    background-position: center;
+}
+
+.authorName {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.postDate {
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+}
+
+.postTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.postBody {
+    color: var(--foreground);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+
+.postFooter {
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+.actionBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+}
+
+.actionBtn:hover {
+    color: var(--primary);
+}
+
+.locked {
+    text-align: center;
+    padding: 4rem;
+    color: var(--muted-foreground);
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    color: var(--muted-foreground);
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    color: var(--foreground);
+}
+
+.tabActive {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.tabActive:hover {
+    color: var(--primary-foreground);
+}
+
+.requestsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.requestCard {
+    background: var(--surface);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.requestInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.requestActions {
+    display: flex;
+    gap: 0.5rem;
+}

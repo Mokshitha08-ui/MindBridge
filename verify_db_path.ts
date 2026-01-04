@@ -1,0 +1,1 @@
+import { PrismaClient } from '@prisma/client'; const prisma = new PrismaClient({ datasources: { db: { url: 'file:./prisma/dev.db' } } }); async function main() { console.log('Circles in prisma/dev.db:', JSON.stringify(await prisma.circle.findMany(), null, 2)); } main();

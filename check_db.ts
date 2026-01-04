@@ -1,0 +1,1 @@
+import { PrismaClient } from '@prisma/client'; const prisma = new PrismaClient(); async function main() { console.log('Users:', await prisma.user.count()); console.log('Circles:', await prisma.circle.count()); console.log('Members:', await prisma.member.count()); console.log('Circles:', JSON.stringify(await prisma.circle.findMany(), null, 2)); } main();

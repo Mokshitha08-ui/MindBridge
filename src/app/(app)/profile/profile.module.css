@@ -1,0 +1,132 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--muted);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--border);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.email {
+    color: var(--muted-foreground);
+}
+
+.form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.formFooter {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--foreground);
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--foreground);
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.success {
+    color: #10B981;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    background: #ecfdf5;
+    border-radius: var(--radius);
+}
+
+.uploadSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.avatarPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatarPreview .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    border: 4px solid white;
+    box-shadow: var(--shadow);
+}
+
+.uploadBtn {
+    background: #0f766e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.uploadBtn:hover {
+    background: #0d9488;
+    transform: translateY(-1px);
+}
+
+.uploadingText {
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin-top: 0.5rem;
+}

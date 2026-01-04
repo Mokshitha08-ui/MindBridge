@@ -1,0 +1,95 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String         @id @default(uuid())
+  email        String         @unique
+  username     String         @unique
+  passwordHash String
+  displayName  String?
+  bio          String?
+  avatarUrl    String?
+  tags         String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  comments     Comment[]
+  journals     JournalEntry[]
+  memberships  Member[]
+  moods        MoodEntry[]
+  posts        Post[]
+}
+
+model Circle {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  tags        String?
+  isPrivate   Boolean  @default(false)
+  coverImage  String?
+  createdAt   DateTime @default(now())
+  members     Member[]
+  posts       Post[]
+}
+
+model Member {
+  id       String   @id @default(uuid())
+  role     String   @default("MEMBER")
+  joinedAt DateTime @default(now())
+  userId   String
+  circleId String
+  circle   Circle   @relation(fields: [circleId], references: [id])
+  user     User     @relation(fields: [userId], references: [id])
+
+  @@unique([userId, circleId])
+}
+
+model Post {
+  id         String    @id @default(uuid())
+  title      String
+  content    String
+  attachment String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  authorId   String
+  circleId   String
+  comments   Comment[]
+  circle     Circle    @relation(fields: [circleId], references: [id])
+  author     User      @relation(fields: [authorId], references: [id])
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  authorId  String
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
+}
+
+model MoodEntry {
+  id        String   @id @default(uuid())
+  value     String
+  date      DateTime @default(now())
+  note      String?
+  isPrivate Boolean  @default(true)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model JournalEntry {
+  id         String   @id @default(uuid())
+  title      String
+  content    String
+  date       DateTime @default(now())
+  isPrivate  Boolean  @default(true)
+  sharedWith String?
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+}

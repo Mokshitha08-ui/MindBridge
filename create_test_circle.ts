@@ -1,0 +1,1 @@
+import { PrismaClient } from '@prisma/client'; const prisma = new PrismaClient(); async function main() { const circle = await prisma.circle.create({ data: { title: 'Public Support Group', description: 'A public group for everyone.', isPrivate: false, tags: 'general, support' } }); console.log('Created Circle:', circle.id); } main();
