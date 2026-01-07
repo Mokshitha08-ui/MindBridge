@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styles from './dashboard.module.css'
 import { Plus, Book, ChevronRight } from 'lucide-react'
 import { format } from 'date-fns'
+import MoodPrompt from '@/components/MoodPrompt'
 
 export default function DashboardPage() {
     const { user } = useAuth()
@@ -54,6 +55,8 @@ export default function DashboardPage() {
                 </div>
                 <Link href="/mood" className={styles.logBtn}>Log Reflection</Link>
             </header>
+
+            <MoodPrompt />
 
             <div className={styles.contentGrid}>
                 <section className={styles.mainFeed}>

@@ -76,6 +76,7 @@
 }
 
 .contentGrid {
+    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 2.5rem;

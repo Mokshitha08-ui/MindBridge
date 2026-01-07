@@ -23,7 +23,7 @@ export default function JournalPage() {
 
             <div className={styles.grid}>
                 {journals.map(entry => (
-                    <Link href={`/journal/${entry.id}`} key={entry.id} className={styles.card}>
+                    <Link href={`/journal/edit/${entry.id}`} key={entry.id} className={styles.card}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                             <h3 className={styles.cardTitle}>{entry.title}</h3>
                             <span className={`${styles.badge} ${entry.isPrivate ? styles.private : styles.shared}`}>

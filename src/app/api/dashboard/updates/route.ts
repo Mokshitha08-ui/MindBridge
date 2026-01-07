@@ -36,7 +36,7 @@ export async function GET() {
                 circleId: { in: circleIds }
             },
             include: {
-                circle: { select: { title: true } },
+                circle: { select: { id: true, title: true } },
                 author: { select: { username: true, displayName: true } }
             },
             orderBy: { createdAt: 'desc' },
